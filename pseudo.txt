@@ -1,3 +1,5 @@
+Este es el pseudocódigo de a función minimax:
+
 function minimax(node, depth, isMaximizingPlayer, alpha, beta):
 
     if node is a leaf node :
@@ -23,5 +25,38 @@ function minimax(node, depth, isMaximizingPlayer, alpha, beta):
                 break
         return bestVal
         
-// Calling the function for the first time.
-minimax(0, 0, true, -INFINITY, +INFINITY)
+
+Pseudocódigo del programa:
+
+
+tablero = inicializar tablero
+imprimir el tablero
+
+num_x = el numero de X en el tablero
+num_o = el numero de O en el tablero
+
+si num_x<num_o:
+    indicar que es el turno del usuario
+si num_x>num_o:
+    indicar que es el turno de la computadora
+si no:
+    preguntarle al usuario de quien es el turno
+
+mientras que nadie haya ganado:
+    si es el turno de la computadora:
+        n = calcular el mejor movimiento
+        
+        x = n/3 (el numero de filas)
+        y = n%3 (el numero de columnas)
+        tablero[x][y] = 'O'
+        
+        imprimir tablero
+        
+    si es el turno del usuario:
+        n = pedirle la posicion al usuario
+        x = n/3
+        y = n%3
+        tablero[x][y] = 'X'
+        
+    
+    
