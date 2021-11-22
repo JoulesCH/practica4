@@ -25,6 +25,14 @@ function minimax(node, depth, isMaximizingPlayer, alpha, beta):
                 break
         return bestVal
         
+funcion calcularMejorMovimiento():
+    x = y = -1
+    puntaje = 0
+    mejor_puntaje = -999
+    for i in [1:3]:
+        for j in [1:3]:
+            si tablero[i][j] esta vacio:
+                tablero[i][j] = 'O'
 
 Pseudocódigo del programa:
 
@@ -44,7 +52,7 @@ si no:
 
 mientras que nadie haya ganado:
     si es el turno de la computadora:
-        n = calcular el mejor movimiento
+        n = calcularMejorMovimiento()
         
         x = n/3 (el numero de filas)
         y = n%3 (el numero de columnas)
