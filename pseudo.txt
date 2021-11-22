@@ -33,9 +33,15 @@ funcion calcularMejorMovimiento():
         for j in [1:3]:
             si tablero[i][j] esta vacio:
                 tablero[i][j] = 'O'
+                puntaje = minimax(tablero)
+                tablero[i][j] = ' '
+                si puntaje > mejor_puntaje:
+                    mejor_puntaje = puntaje
+                    
+    return mejor_puntaje
+
 
 Pseudocódigo del programa:
-
 
 tablero = inicializar tablero
 imprimir el tablero
