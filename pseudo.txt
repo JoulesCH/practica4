@@ -1,29 +1,29 @@
 Este es el pseudocódigo de a función minimax:
 
-function minimax(node, depth, isMaximizingPlayer, alpha, beta):
+function minimax(nodo, produndidad, esMaximo, alpha, beta):
 
-    if node is a leaf node :
-        return value of the node
+    si nodo es una hoja :
+        return valor del nodo
     
-    if isMaximizingPlayer :
-        bestVal = -INFINITY 
-        for each child node :
-            value = minimax(node, depth+1, false, alpha, beta)
-            bestVal = max( bestVal, value) 
-            alpha = max( alpha, bestVal)
-            if beta <= alpha:
+    si esMaximo :
+        mejor_valor = -INFINITY 
+        for cada nodo hijo :
+            valor = minimax(nodo, profundidad+1, false, alpha, beta)
+            mejor_valor = max( mejor_valor, valor) 
+            alpha = max( alpha, mejor_valor)
+            si beta <= alpha:
                 break
-        return bestVal
+        return mejor_valor
 
-    else :
-        bestVal = +INFINITY 
-        for each child node :
-            value = minimax(node, depth+1, true, alpha, beta)
-            bestVal = min( bestVal, value) 
-            beta = min( beta, bestVal)
-            if beta <= alpha:
+    sino :
+        mejor_valor = +INFINITY 
+        for cada nodo hijo :
+            valor = minimax(nodo, profundidad+1, true, alpha, beta)
+            mejor_valor = min( mejor_valor, valor) 
+            beta = min( beta, mejor_valor)
+            si beta <= alpha:
                 break
-        return bestVal
+        return mejor_valor
         
 funcion calcularMejorMovimiento():
     x = y = -1
@@ -53,7 +53,7 @@ si num_x<num_o:
     indicar que es el turno del usuario
 si num_x>num_o:
     indicar que es el turno de la computadora
-si no:
+sino:
     preguntarle al usuario de quien es el turno
 
 mientras que nadie haya ganado:
